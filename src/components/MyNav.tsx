@@ -19,7 +19,7 @@ const MyNav = () => {
             <ul>
                 {
                     enemiesArray.map(( item: enemies, index: number ) => (
-                        <li>
+                        <li key={index}>
                             <Link href={{
                                 pathname: '/enemies',
                                 query: { id: index },

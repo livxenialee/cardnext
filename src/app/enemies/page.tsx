@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import card from "../page.module.scss";
 import Image from "next/image";
 import { gsap } from "gsap";
