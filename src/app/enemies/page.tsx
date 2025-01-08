@@ -60,17 +60,17 @@ const Page = () => {
     return (
 
         <main>
-            <Suspense>
-                <section ref={refObj} id={card.cardContainer}>
-                    <div id={card.card}>
+            <section ref={refObj} id={card.cardContainer}>
+                <div id={card.card}>
+                    <Suspense>
                         <div id={card.headline}>{data[id].name}</div>
                         <div id={card.imagecon}>
                             <Image src={data[id].img} alt="Picture of the author" width={250} height={250} priority={true}  />
                         </div>
                         <div id={card.content}>{data[id].text}</div>
-                    </div>
-                </section>
-            </Suspense>
+                    </Suspense>
+                </div>
+            </section>
 
         </main>
 
