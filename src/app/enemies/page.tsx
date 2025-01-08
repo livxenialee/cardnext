@@ -62,13 +62,11 @@ const Page = () => {
         <main>
             <section ref={refObj} id={card.cardContainer}>
                 <div id={card.card}>
-                    <Suspense>
-                        <div id={card.headline}>{data[id].name}</div>
-                        <div id={card.imagecon}>
-                            <Image src={data[id].img} alt="Picture of the author" width={250} height={250} priority={true}  />
-                        </div>
-                        <div id={card.content}>{data[id].text}</div>
-                    </Suspense>
+                    <div id={card.headline}>{data[id].name}</div>
+                    <div id={card.imagecon}>
+                        <Image src={data[id].img} alt="Picture of the author" width={250} height={250} priority={true}  />
+                    </div>
+                    <div id={card.content}>{data[id].text}</div>
                 </div>
             </section>
 
