@@ -1,10 +1,20 @@
 import Image from "next/image";
-import styles from "./page.module.css";
+import Link from "next/link";
+import cardstyle from "@/app/page.module.scss"
 
 export default function Home() {
+
   return (
-    <div>
-      Card
-    </div>
+
+    <main>
+
+      <section id={cardstyle.cardContainer}>
+
+        <div id={cardstyle.card}></div>
+
+      </section>
+
+    </main>
+
   );
 }
