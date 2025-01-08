@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, Suspense } from "react";
 import card from "../page.module.scss";
 import Image from "next/image";
 import { gsap } from "gsap";
@@ -60,19 +60,17 @@ const Page = () => {
     return (
 
         <main>
-            <section ref={refObj} id={card.cardContainer}>
-                <div id={card.card}>
-
-                    <div id={card.headline}>{data[id].name}</div>
-                    <div id={card.imagecon}>
-                        <Image src={data[id].img} alt="Picture of the author" width={250} height={250} priority={true}  />
+            <Suspense>
+                <section ref={refObj} id={card.cardContainer}>
+                    <div id={card.card}>
+                        <div id={card.headline}>{data[id].name}</div>
+                        <div id={card.imagecon}>
+                            <Image src={data[id].img} alt="Picture of the author" width={250} height={250} priority={true}  />
+                        </div>
+                        <div id={card.content}>{data[id].text}</div>
                     </div>
-
-
-                    <div id={card.content}>{data[id].text}</div>
-
-                </div>
-            </section>
+                </section>
+            </Suspense>
 
         </main>
 
